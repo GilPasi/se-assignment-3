@@ -2,23 +2,24 @@ package assignment3_;
 
 public class FizzBuzz {
 
+	StringBuilder str = new StringBuilder();
+	
 	public String calculateFizzBuzz(int i) {
-		String result ="";
-		for (int j =1; j<=i; j++) {
-			if(j ==3)
-				result += "Fizz";
-			else if ( j ==5)
-				result += "Buzz";
+		
+		for (int j=1; j<=i; j++) {
+			if(j == 3)
+				str.append("Fizz");
+			else if ( j == 5)
+				str.append("Buzz");
 			else
-				result += j;
-			result += ", ";
-		}
-		result = result.substring(0,result.length()-2);
-		System.out.println(result);
-		return result;
+				str.append(j);
+			
+			str.append(", ");
+		}	
+		
+		return str.substring(0, str.length()-2);
 	}
 
-	
 
 }
 
